@@ -13,12 +13,16 @@ HW3
     <title>Personal CV</title> 
     <link rel="icon" href="faviconshrek.jpg">
     <style>
+        h2 {
+            font-style: italic;
+            color:rgb(115, 166, 221)
+        }
         #topNav {
             display: flex;
             background-color: lavender;
             
         }
-        #primarySect {
+        .primarySect {
             display: flex;
         }
         #rightMain {
@@ -35,6 +39,78 @@ HW3
             width: 30%;
             flex: 1 0 30%;
         }
+        #leftIntro p {
+            border: solid;
+            border-width: 1px;
+            padding: 6px;
+            background-color: rgb(161, 199, 240);
+            margin: 6px;
+        }
+        #skills ul {
+            border: solid;
+            border-width: 2px;
+            color: forestgreen;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin: 10px;
+            background-color: lightcyan;
+        }
+        .work tr:nth-child(even) {
+            background-color: rgba(177, 65, 241, 0.303);
+        }
+        .work table thead {
+            background-color: rgb(120, 120, 238);
+            color: white;
+            padding: 10px;
+        }
+        .work table {
+            border: solid;
+            border-width: 2px;
+            margin: 10px;
+            background-color: rgb(191, 219, 250);
+            text-align: center;
+        }
+        .education #ed tr:nth-child(even) {
+            background-color: rgb(120, 250, 111);
+        }
+        .education #ed thead {
+            background-color: rgb(9, 227, 205);
+            color: white;
+            padding: 10px;
+        }
+        .education #ed {
+            border: solid;
+            border-width: 2px;
+            margin: 10px;
+            background-color: rgb(79, 208, 234);
+            text-align: center;
+        }
+        .education #qual tr:nth-child(even) {
+            background-color: rgb(244, 250, 191);
+        }
+        .education #qual thead {
+            background-color: rgb(241, 201, 21);
+            color: white;
+            padding: 10px;
+        }
+        .education #qual {
+            border: solid;
+            border-width: 2px;
+            margin: 10px;
+            background-color: rgb(247, 225, 177);
+            text-align: center;
+        }
+        .hobby ol{
+            background-color: rgba(228, 160, 251, 0.423);
+            margin: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        #urDragon {
+            box-shadow: 10px 10px 10px blue;
+            margin: 10px;
+        }
+
     </style>
 </head> 
 <body> 
@@ -45,7 +121,7 @@ HW3
             </h1>
         </nav>
     </div>
-    <div id="primarySect">
+    <div class="primarySect">
         <div id="leftIntro">
             <header>
                 <h2>Darian Range</h2>
@@ -62,112 +138,120 @@ HW3
         </div>
         <div id="rightMain">
         <main>
-            <h2>My Skills</h2>
-            <ul>
-                <li>Teamwork</li>
-                <li>Leadership</li>
-                <li>Communication</li>
-                <li>Listening</li>
-            </ul>
-            <h2>Work Experience</h2>
-            <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Length</th>
-                    <th>Roll</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Forrstar Orchards</td>
-                    <td>June 2018-July 2019 (seasonal)</td>
-                    <td>Field Sorter</td>
-                </tr>
-                <tr>
-                    <td>Gebbers Farms</td>
-                    <td>June 2020-July 2020</td>
-                    <td>Box filler and weigher</td>
-                </tr>
-                <tr>
-                    <td>Swiftwater Cellars</td>
-                    <td>July 2020-August 2021</td>
-                    <td>Expedite</td>
-                </tr>
-                <tr>
-                    <td>Davenport Grand</td>
-                    <td>June 2022-Current</td>
-                    <td>Expedite, Room Service</td>
-                </tr>
-            </tbody>
-            </table>
-            <h2>Education</h2>
-            <table id="ed">
+            <div class="skills">
+                <h2>My Skills</h2>
+                <ul>
+                    <li>Teamwork</li>
+                    <li>Leadership</li>
+                    <li>Communication</li>
+                    <li>Listening</li>
+                </ul>
+            </div>
+            <div class="work">
+                <h2>Work Experience</h2>
+                <table>
                 <thead>
                     <tr>
-                        <th>Name of Institution</th>
-                        <th>Degree Obtained/Pursued</th>
-                        <th>Time Attended</th>
+                        <th>Name</th>
+                        <th>Length</th>
+                        <th>Roll</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Oroville High School</td>
-                        <td>High School Degree</td>
-                        <td>2016-2020</td>
+                        <td>Forrstar Orchards</td>
+                        <td>June 2018-July 2019 (seasonal)</td>
+                        <td>Field Sorter</td>
                     </tr>
                     <tr>
-                        <td>Wenatchee Valley College</td>
-                        <td>Associates in General Arts</td>
-                        <td>2018-2020</td>
+                        <td>Gebbers Farms</td>
+                        <td>June 2020-July 2020</td>
+                        <td>Box filler and weigher</td>
                     </tr>
                     <tr>
-                        <td>Gonzaga University</td>
-                        <td>BA in Computer Science</td>
-                        <td>2020-Current</td>
+                        <td>Swiftwater Cellars</td>
+                        <td>July 2020-August 2021</td>
+                        <td>Expedite</td>
+                    </tr>
+                    <tr>
+                        <td>Davenport Grand</td>
+                        <td>June 2022-Current</td>
+                        <td>Expedite, Room Service</td>
                     </tr>
                 </tbody>
-            </table>
-            <h2>Qualifications</h2>
-            <table id="Qual">
-                <thead>
-                    <tr>
-                        <th>Programing Languages</th>
-                        <th>Work Skills</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>c</td>
-                        <td>80+ WPM typing speed</td>
-                    </tr>
-                    <tr>
-                        <td>c++</td>
-                        <td>customer service experience</td>
-                    </tr>
-                    <tr>
-                        <td>python</td>
-                        <td>new employee training experience</td>
-                    </tr>
-                    <tr>
-                        <td>Assembly x86</td>
-                        <td>financial paperwork experience</td>
-                    </tr>
-                    <tr>
-                        <td>html</td>
-                        <td>machine operation experience</td>
-                    </tr>
-                </tbody>
-            </table>
-            <h2>My Hobbies and Interests</h2>
-            <ol>
-                <li>Magic: The Gathering, collecting and competing</li>
-                <li>Import Sports Cars</li>
-                <li>NFL Football</li>
-                <li>Ecryption</li>
-                <li>Operating Systems</li>
-            </ol>
-            <a href="https://magic.wizards.com/en" target="_blank"><img src="c17-48-the-ur-dragon.png" alt="link to mtg website image is ur-dragon card" height="200"></a>
+                </table>
+            </div>
+            <div class="education">
+                <h2>Education</h2>
+                <table id="ed">
+                    <thead>
+                        <tr>
+                            <th>Name of Institution</th>
+                            <th>Degree Obtained/Pursued</th>
+                            <th>Time Attended</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Oroville High School</td>
+                            <td>High School Degree</td>
+                            <td>2016-2020</td>
+                        </tr>
+                        <tr>
+                            <td>Wenatchee Valley College</td>
+                            <td>Associates in General Arts</td>
+                            <td>2018-2020</td>
+                        </tr>
+                        <tr>
+                            <td>Gonzaga University</td>
+                            <td>BA in Computer Science</td>
+                            <td>2020-Current</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Qualifications</h2>
+                <table id="qual">
+                    <thead>
+                        <tr>
+                            <th>Programing Languages</th>
+                            <th>Work Skills</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>c</td>
+                            <td>80+ WPM typing speed</td>
+                        </tr>
+                        <tr>
+                            <td>c++</td>
+                            <td>customer service experience</td>
+                        </tr>
+                        <tr>
+                            <td>python</td>
+                            <td>new employee training experience</td>
+                        </tr>
+                        <tr>
+                            <td>Assembly x86</td>
+                            <td>financial paperwork experience</td>
+                        </tr>
+                        <tr>
+                            <td>html</td>
+                            <td>machine operation experience</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="hobby">
+                <h2>My Hobbies and Interests</h2>
+                <ol>
+                    <li>Magic: The Gathering, collecting and competing</li>
+                    <li>Import Sports Cars</li>
+                    <li>NFL Football</li>
+                    <li>Ecryption</li>
+                    <li>Operating Systems</li>
+                </ol>
+            </div>
+            <a id="urDragon" href="https://magic.wizards.com/en" target="_blank"><img src="c17-48-the-ur-dragon.png" alt="link to mtg website image is ur-dragon card" height="200"></a>
         </main>
         </div>
     </div>
