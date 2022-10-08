@@ -22,6 +22,16 @@ HW3
             background-color: lavender;
             
         }
+        #topNav nav img {
+            display: flex;
+            position: relative;
+            float: left;
+            margin: 10px;
+        }
+        #topNav nav h1 {
+            display: flex;
+            position: relative;
+        }
         .primarySect {
             display: flex;
         }
@@ -46,7 +56,7 @@ HW3
             background-color: rgb(161, 199, 240);
             margin: 6px;
         }
-        #skills ul {
+        .skills ul {
             border: solid;
             border-width: 2px;
             color: forestgreen;
@@ -105,10 +115,16 @@ HW3
             margin: 10px;
             padding-top: 5px;
             padding-bottom: 5px;
+            
+            box-shadow: 5px 5px 5px rgb(107, 107, 224);
         }
         #urDragon {
-            box-shadow: 10px 10px 10px blue;
             margin: 10px;
+            border-radius: 10px;
+        }
+        #leftIntro header img {
+            margin: 10px;
+            width: 200px;
         }
 
     </style>
@@ -116,9 +132,13 @@ HW3
 <body> 
     <div id="topNav">
         <nav>
+            <img src="./logo.png" alt="logo" height="75">
             <h1>
                 My Personal CV
             </h1>
+            <a href="./index.html#ed">Jump to Education</a>
+            <a href="./index.html#qual">Jump to qualifications</a>
+            <a href="./index.html#hobby">Jump to hobbies</a>
         </nav>
     </div>
     <div class="primarySect">
